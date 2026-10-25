@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os sabores nordestinos do restaurante Raízes do Nordeste.">
+    <title>Raízes do Nordeste</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Raízes do Nordeste</h1>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#unidade">Unidades</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#pedidos">Pedidos</a>
+            <a href="#promocoes">Promoções</a>
+            <a href="#fidelidade">Fidelidade</a>
+            <a href="#privacidade">Privacidade</a>
+        </nav>
+    </header>
+
+    <main>
+        
+<section id="acesso">
+    <h2>Área do cliente</h2>
+
+    <p>Digite seus dados.</p>
+
+    <form id="formulario-acesso">
+        <label for="email-cliente">E-mail:</label>
+        <input
+            type="email"
+            id="email-cliente"
+            placeholder="seuemail@exemplo.com"
+            required
+        >
+
+        <label for="senha-cliente">Senha:</label>
+        <input
+            type="password"
+            id="senha-cliente"
+            placeholder="Digite uma senha demonstrativa"
+            required
+        >
+
+        <button type="submit">Entrar</button>
+        <p id="mensagem-acesso" role="status"></p>
+    </form>
+</section>
+
+<section id="cadastro">
+    <h2>Cadastro de cliente</h2>
+
+    <form id="formulario-cadastro">
+        <label for="nome-cliente">Nome:</label>
+        <input type="text" id="nome-cliente"
+            placeholder="Digite um nome fictício" required>
+
+        <label for="email-cadastro">E-mail:</label>
+        <input type="email" id="email-cadastro"
+            placeholder="cliente@exemplo.com" required>
+
+        <label for="senha-cadastro">Senha:</label>
+        <input type="password" id="senha-cadastro"
+            placeholder="Crie uma senha demonstrativa" required>
+
+        <button type="submit">Cadastrar</button>
+        <p id="mensagem-cadastro" role="status"></p>
+    </form>
+</section>       
+<section id="inicio">
+            <h2>Nossas opções</h2>
+            <p>Descubra os sabores da culinária nordestina.</p>
+            <p>Comida regional, sabor e tradição!</p>
+        </section>
+
+        <section id="promocoes">
+            <h2>Promoções especiais</h2>
+
+            <div class="produto">
+                <h3>Combo nordestino</h3>
+                <p>Confira nossos pratos clássicos e aproveite sua refeição!</p>
+                <p><strong>Oferta ilustrativa:</strong> promoção demonstrativa para este projeto acadêmico.</p>
+            </div>
+        </section>
+
+<section id="unidade">
+    <h2>Escolha sua unidade</h2>
+
+    <label for="unidade-restaurante">Unidade:</label>
+
+    <select id="unidade-restaurante">
+        <option value="canoas">Canoas - Centro</option>
+        <option value="porto-alegre">Porto Alegre - Centro</option>
+    </select>
+
+    <p>Selecione a unidade em que deseja realizar o seu pedido.</p>
+</section>
+
+        <section id="cardapio">
+            <h2>Pratos clássicos</h2>
+
+            <div class="lista-produtos">
+                <div class="produto">
+                    <h3>Baião de dois</h3>
+                    <p>Arroz, feijão e queijo coalho.</p>
+                    <p>Preço: R$ 24,90</p>
+
+                    <button data-produto="Baião de dois" data-preco="24.90">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+
+                <div class="produto">
+                    <h3>Cuscuz</h3>
+                    <p>Flocão de milho e sal a gosto.</p>
+                    <p>Preço: R$ 29,90</p>
+
+                    <button data-produto="Cuscuz" data-preco="29.90">
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="pedidos">
+            <h2>Meus pedidos</h2>
+
+            <div id="carrinho">
+                <h3>Meu carrinho</h3>
+
+                <ul id="itens-carrinho"></ul>
+
+                <p id="total-carrinho">Total: R$ 0,00</p>
+
+                <button id="finalizar-pedido">
+                    Finalizar pedido
+                </button>
+
+                <p id="mensagem-pedido"></p>
+            </div>
+
+            <div id="acompanhamento">
+                <h3>Acompanhe seu pedido</h3>
+
+                <p id="status-pedido">
+                    Você ainda não possui um pedido confirmado.
+                </p>
+
+                <button id="avancar-status" hidden>
+                    Avançar status do pedido
+                </button>
+            </div>
+
+            <div id="pagamento">
+                <h3>Pagamento</h3>
+                <label for="forma-pagamento">Forma de pagamento:</label>
+
+<select id="forma-pagamento">
+    <option value="">Selecione uma opção</option>
+    <option value="pix">PIX (simulação)</option>
+    <option value="cartao">Cartão (simulação)</option>
+    <option value="dinheiro">Dinheiro na retirada</option>
+</select>
+
+<button id="confirmar-pagamento" type="button">
+    Confirmar pagamento simulado
+</button>
+
+<p id="mensagem-pagamento" role="status"></p>
+                <p>Esta demonstração não realiza cobranças reais.</p>
+                <p>Em uma aplicação real, o pagamento seria realizado em um ambiente seguro de um provedor de pagamento externo.</p>
+                <p><strong>Status:</strong> simulação acadêmica, sem transação financeira.</p>
+            </div>
+        </section>
+
+        <section id="fidelidade">
+            <h2>Programa de fidelidade</h2>
+
+            <p>Na simulação, cada R$ 1,00 gasto em um pedido confirmado vale 1 ponto.</p>
+
+            <p id="pontos-cliente">Seus pontos: 0</p>
+            <p>Os pontos são demonstrativos e não representam saldo ou benefício real.</p>
+        </section>
+
+        <section id="privacidade">
+            <h2>Privacidade e proteção de dados</h2>
+
+            <h3>Como tratamos seus dados</h3>
+            <p>Este site se trata de um protótipo acadêmico. Os dados digitados são utilizados somente para demonstrar o funcionamento da interface. Não informe dados reais.</p>
+
+            <h3>Finalidade</h3>
+            <p>As informações do carrinho e do pedido são utilizadas apenas para demonstrar o funcionamento das funcionalidades do site durante a navegação.</p>
+
+            <h3>Pagamentos</h3>
+            <p>Não informe dados de cartão ou outras informações financeiras neste protótipo. Nenhum pagamento real é processado.</p>
+
+            <h3>Consentimento</h3>
+            <p>Se futuramente forem coletados dados pessoais, o responsável pelo serviço deverá explicar quais dados serão utilizados, para quais finalidades e quais são os direitos do titular, conforme a legislação aplicável.</p>
+
+            <label>
+                <input type="checkbox" id="consentimento-privacidade">
+                Li o aviso de privacidade desta demonstração.
+            </label>
+
+            <p id="mensagem-privacidade" role="status">
+                A leitura deste aviso é opcional para navegar pelo protótipo.
+            </p>
+
+            <button id="confirmar-privacidade" type="button">
+                Confirmar leitura
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Raízes do Nordeste — Projeto acadêmico.</p>
+        <p>Protótipo demonstrativo, sem processamento de pagamentos reais.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+
+    <script>
+        const checkboxPrivacidade = document.querySelector("#consentimento-privacidade");
+        const botaoPrivacidade = document.querySelector("#confirmar-privacidade");
+        const mensagemPrivacidade = document.querySelector("#mensagem-privacidade");
+
+        botaoPrivacidade.addEventListener("click", function() {
+            if (checkboxPrivacidade.checked) {
+                mensagemPrivacidade.textContent =
+                    "Leitura do aviso confirmada. Nenhum dado pessoal foi enviado.";
+            } else {
+                mensagemPrivacidade.textContent =
+                    "Se desejar, marque a opção para confirmar que leu o aviso.";
+            }
+        });
+    </script>
+</body>
+</html>
